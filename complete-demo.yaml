@@ -7,10 +7,10 @@ metadata:
   namespace: sock-shop
 spec:
   replicas: 1
-  template:
-    selector:
+  selector:
       matchLabels:
         name: carts-db
+  template:
     metadata:
       labels:
         name: carts-db
@@ -59,14 +59,14 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: carts
-  selector:
-      matchLabels:
-        name: carts
   labels:
     name: carts
   namespace: sock-shop
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      name: carts
   template:
     metadata:
       labels:
